@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geração Futuro | Teste Vocacional</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <header class="header">
+
+    <div class="header-container">
+
+        <img src="imagens/ChatGPT Image 11 de set. de 2026, 10_54_34.png" alt="Logo Geração Futuro" class="logo">
+
+        <div class="header-text">
+            <span>GERAÇÃO FUTURO</span>
+            <strong>ORIENTAÇÃO VOCACIONAL</strong>
+            <small>Descubra caminhos para o seu futuro</small>
+        </div>
+
+    </div>
+
+    <!-- MENU DO SITE -->
+    <nav class="menu">
+
+        <a href="#inicio">Início</a>
+
+        <a href="#sobre">Sobre Nós</a>
+
+        <a href="#participantes">Nosso Grupo</a>
+
+    </nav>
+
+</header>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             TELA INICIAL
+        ========================== -->
+
+        <section id="inicio" class="tela">
+
+            <div class="card inicio-card">
+
+                <div class="etiqueta">
+                    TESTE VOCACIONAL
+                </div>
+
+                <h1>
+                    Descubra a área que mais combina
+                    <span>com você.</span>
+                </h1>
+
+                <p class="introducao">
+                    Responda às perguntas pensando nos seus interesses,
+                    habilidades e atividades que você gostaria de realizar.
+                </p>
+
+
+                <!-- ESTATÍSTICAS -->
+
+                <div class="estatisticas">
+
+                    <div>
+                        <strong>10</strong>
+                        <span>Perguntas</span>
+                    </div>
+
+                    <div>
+                        <strong>6</strong>
+                        <span>Áreas</span>
+                    </div>
+
+                    <div>
+                        <strong>3–5</strong>
+                        <span>Minutos</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ÁREAS -->
+
+                <div class="areas">
+
+                    <div class="area">
+                        <div class="icone">💻</div>
+
+                        <div>
+                            <strong>Tecnologia e Inovação</strong>
+                            <small>Tecnologia, soluções e inovação</small>
+                        </div>
+                    </div>
+
+
+                    <div class="area">
+                        <div class="icone">🤝</div>
+
+                        <div>
+                            <strong>Pessoas e Sociedade</strong>
+                            <small>Relações, educação e sociedade</small>
+                        </div>
+                    </div>
+
+
+                    <div class="area">
+                        <div class="icone">🎨</div>
+
+                        <div>
+                            <strong>Criatividade e Comunicação</strong>
+                            <small>Arte, conteúdo e comunicação</small>
+                        </div>
+                    </div>
+
+
+                    <div class="area">
+                        <div class="icone">📈</div>
+
+                        <div>
+                            <strong>Negócios e Liderança</strong>
+                            <small>Gestão, estratégia e liderança</small>
+                        </div>
+                    </div>
+
+
+                    <div class="area">
+                        <div class="icone">🔬</div>
+
+                        <div>
+                            <strong>Ciências e Descoberta</strong>
+                            <small>Pesquisa, ciência e investigação</small>
+                        </div>
+                    </div>
+
+
+                    <div class="area">
+                        <div class="icone">✨</div>
+
+                        <div>
+                            <strong>Estética e Bem-Estar</strong>
+                            <small>Imagem, cuidado e bem-estar</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="aviso">
+
+                    <strong>Como funciona?</strong>
+
+                    <span>
+                        Cada pergunta possui seis alternativas.
+                        Escolha aquela que mais representa você.
+                        Não existe resposta certa ou errada.
+                    </span>
+
+                </div>
+
+
+                <button id="btnIniciar" class="botao-principal">
+                    Começar teste →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA DO TESTE
+        ========================== -->
+
+        <section id="teste" class="tela escondida">
+
+            <div class="card teste-card">
+
+                <div class="topo-teste">
+
+                    <div>
+
+                        <div class="etiqueta">
+                            AVALIAÇÃO DE INTERESSES
+                        </div>
+
+                        <strong id="contador">
+                            Pergunta 1 de 10
+                        </strong>
+
+                    </div>
+
+                    <strong id="porcentagem">
+                        10%
+                    </strong>
+
+                </div>
+
+
+                <!-- BARRA -->
+
+                <div class="barra">
+
+                    <div id="progresso"></div>
+
+                </div>
+
+
+                <div class="numero-questao" id="numeroQuestao">
+                    QUESTÃO 01
+                </div>
+
+
+                <h2 id="pergunta">
+                    Pergunta
+                </h2>
+
+
+                <p class="instrucao">
+                    Escolha a alternativa que mais representa você.
+                </p>
+
+
+                <!-- ALTERNATIVAS -->
+
+                <div id="opcoes" class="opcoes"></div>
+
+
+                <!-- NAVEGAÇÃO -->
+
+                <div class="navegacao">
+
+                    <button id="btnVoltar" class="botao-secundario">
+                        ← Voltar
+                    </button>
+
+                    <span id="feedback">
+                        Selecione uma alternativa para continuar.
+                    </span>
+
+                    <button id="btnProximo" class="botao-principal" disabled>
+                        Próxima →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado" class="tela escondida">
+
+            <div class="card resultado-card">
+
+                <div class="etiqueta">
+                    SEU RESULTADO
+                </div>
+
+                <h1>
+                    Seu perfil de
+                    <span>interesses.</span>
+                </h1>
+
+                <p class="introducao">
+                    Veja quais áreas apresentaram maior afinidade
+                    de acordo com suas respostas.
+                </p>
+
+
+                <!-- RESULTADO PRINCIPAL -->
+
+                <div class="resultado-principal">
+
+                    <div id="iconeResultado" class="icone-resultado">
+                        💻
+                    </div>
+
+                    <div>
+
+                        <span>
+                            MAIOR AFINIDADE
+                        </span>
+
+                        <h2 id="nomeResultado">
+                            Tecnologia e Inovação
+                        </h2>
+
+                        <p id="descricaoResultado"></p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTADO EM DUAS COLUNAS -->
+
+                <div class="resultado-grid">
+
+
+                    <!-- RANKING -->
+
+                    <div class="painel">
+
+                        <h3>
+                            📊 Ranking das áreas
+                        </h3>
+
+                        <div id="ranking"></div>
+
+                    </div>
+
+
+                    <!-- PERFIL -->
+
+                    <div class="painel">
+
+                        <h3>
+                            👤 Sobre seu perfil
+                        </h3>
+
+                        <p id="perfilResultado"></p>
+
+
+                        <div class="possibilidades">
+
+                            <strong>
+                                Possibilidades para explorar
+                            </strong>
+
+                            <p id="sugestoesResultado"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="aviso aviso-laranja">
+
+                    <strong>Importante</strong>
+
+                    <span>
+                        Este teste é uma ferramenta de autoconhecimento
+                        e orientação. Ele não determina sozinho qual
+                        profissão você deve escolher.
+                    </span>
+
+                </div>
+
+
+                <button id="btnRefazer" class="botao-principal">
+                    ↻ Refazer teste
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         PARTICIPANTES DO PROJETO
+    ========================== -->
+
+    <section id="participantes" class="tela">
+
+        <div class="card participantes-card">
+
+            <div class="etiqueta">
+                NOSSO GRUPO
+            </div>
+
+            <h1>
+                Participantes do
+                <span>projeto.</span>
+            </h1>
+
+            <p class="introducao">
+                Conheça os integrantes responsáveis pela criação
+                e desenvolvimento do Geração Futuro.
+            </p>
+
+            <div class="lista-participantes">
+
+                <div class="participante">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Arthur</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+                <div class="participante">
+                    <div class="avatar">V</div>
+                    <div>
+                        <strong>Vinícius</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+                <div class="participante">
+                    <div class="avatar">MW</div>
+                    <div>
+                        <strong>Miguel Weingartner</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+                <div class="participante">
+                    <div class="avatar">RR</div>
+                    <div>
+                        <strong>Rafael Rocha</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+                <div class="participante">
+                    <div class="avatar">AC</div>
+                    <div>
+                        <strong>Ana Carolina</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+                <div class="participante">
+                    <div class="avatar">M</div>
+                    <div>
+                        <strong>Monique</strong>
+                        <small>Integrante do projeto</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <strong>Geração Futuro</strong>
+
+        <span>
+            Seu futuro começa com uma escolha.
+        </span>
+
+    </footer>
+
+    <!-- =========================
+     SOBRE NÓS
+========================== -->
+
+<section id="sobre" class="tela">
+
+    <div class="card sobre-card">
+
+        <div class="etiqueta">
+            SOBRE NÓS
+        </div>
+
+        <h1>
+            Conheça a
+            <span>Geração Futuro</span>
+        </h1>
+
+        <p class="sobre-texto">
+            A Geração Futuro é uma ONG voltada para ajudar
+            jovens a conhecer seus interesses, descobrir novas
+            possibilidades profissionais e tomar decisões mais
+            conscientes sobre o futuro.
+        </p>
+
+        <div class="sobre-info">
+
+            <div>
+                <span>🎯</span>
+                <strong>Nosso objetivo</strong>
+                <p>
+                    Orientar jovens na escolha de caminhos
+                    profissionais que tenham relação com seus
+                    interesses e habilidades.
+                </p>
+            </div>
+
+            <div>
+                <span>🧭</span>
+                <strong>O que fazemos</strong>
+                <p>
+                    Utilizamos o teste vocacional como uma
+                    ferramenta de autoconhecimento e orientação
+                    profissional.
+                </p>
+            </div>
+
+            <div>
+                <span>🚀</span>
+                <strong>Nosso propósito</strong>
+                <p>
+                    Ajudar cada jovem a explorar possibilidades
+                    e construir um futuro com mais confiança.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sobre-frase">
+            <strong>Geração Futuro</strong>
+            <span>Seu futuro começa com uma escolha.</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- VLibras -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
